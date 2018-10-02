@@ -93,7 +93,6 @@ function newSocket(socket) {
   sockets.push(socket);
   socket.write('You have connected to the server.\n');
   socket.on('data', function(data) {
-    console.log('receive data: ' + data);
     receiveData(socket, data);
   })
   socket.on('end', function() {
